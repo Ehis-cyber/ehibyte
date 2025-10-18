@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EhiByte | Professional Full-Stack Developer Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.svg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Particles.js for particle effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div class="grid-background"></div>
+    
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- 3D Canvas Background -->
+    <canvas id="three-canvas"></canvas>
+    
+    <!-- Animated Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <i class="fas fa-code"></i>
+                <span>EhiByte</span>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+            <p>Loading Amazing Experience...</p>
+        </div>
+    </div>
+    
+    <!-- Floating 3D Elements -->
+    <div class="floating-3d-elements">
+        <div class="floating-cube cube-1"></div>
+        <div class="floating-sphere sphere-1"></div>
+        <div class="floating-pyramid pyramid-1"></div>
+        <div class="floating-torus torus-1"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>EhiByte</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="chat-bubble chat-1">
+                    <i class="fas fa-wave-square"></i>
+                    <span>Hello there!</span>
+                </div>
+                <div class="chat-bubble chat-2">
+                    <i class="fas fa-smile"></i>
+                    <span>Ready to create something amazing?</span>
+                </div>
+                <div class="chat-bubble chat-3">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Let's work together!</span>
+                </div>
+                <div class="chat-bubble chat-4">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                
+                <div class="floating-element plus-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            
+            <div class="hero-center">
+                <div class="main-screen">
+                    <div class="screen-header">
+                        <div class="screen-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="screen-icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="mountain-scene">
+                            <div class="animated-sky">
+                                <div class="cloud cloud-1"></div>
+                                <div class="cloud cloud-2"></div>
+                                <div class="cloud cloud-3"></div>
+                                <div class="stars">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <div class="sun animated-sun">
+                                <div class="sun-rays"></div>
+                            </div>
+                            <div class="mountains">
+                                <div class="mountain mountain-1">
+                                    <div class="mountain-shadow"></div>
+                                </div>
+                                <div class="mountain mountain-2">
+                                    <div class="mountain-shadow"></div>
+                                </div>
+                                <div class="mountain mountain-3">
+                                    <div class="mountain-shadow"></div>
+                                </div>
+                            </div>
+                            <div class="animated-particles">
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                            </div>
+                            <div class="sky"></div>
+                        </div>
+                        <div class="toolbar">
+                            <div class="tool-item active">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <div class="user-profile">
+                    <div class="profile-pic">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-menu">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+                
+                <div class="gift-box">
+                    <i class="fas fa-gift"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="avatar-row">
+            <div class="avatar avatar-1">
+                <i class="fas fa-cat"></i>
+            </div>
+            <div class="avatar avatar-2">
+                <i class="fas fa-dog"></i>
+            </div>
+            <div class="avatar avatar-3 active">
+                <i class="fas fa-paw"></i>
+            </div>
+            <div class="avatar avatar-4">
+                <i class="fas fa-fish"></i>
+            </div>
+            <div class="floating-element plus-circle">
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+        
+        <div class="hero-text">
+            <h1 class="gradient-title">Creative Developer & Designer</h1>
+            <p>Crafting digital experiences that captivate and inspire</p>
+            <div class="cta-buttons">
+                <a href="https://hitmeupafrica.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i>
+                    View My Work
+                </a>
+                <a href="mailto:okontaehijesumuan@gmail.com?subject=Inquiry from Portfolio&body=Hello EhiByte,%0D%0A%0D%0AI found your portfolio and would like to discuss..." class="btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+                <a href="#" class="btn-cv" id="downloadCV">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Passionate about creating unique digital experiences unique to every users taste.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello! I'm an Eccentric Developer</h3>
+                    <p>With a passion for creating stunning, user-friendly websites and applications. I specialize in modern web technologies and love bringing creative ideas to life through code.</p>
+                    <div class="skills">
+                        <div class="skill-item skill-3d" data-skill="95">
+                            <div class="skill-front">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-back">
+                                <div class="skill-progress">
+                                    <div class="progress-circle">
+                                        <span class="progress-number">95%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-3d" data-skill="90">
+                            <div class="skill-front">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-back">
+                                <div class="skill-progress">
+                                    <div class="progress-circle">
+                                        <span class="progress-number">90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-3d" data-skill="85">
+                            <div class="skill-front">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-back">
+                                <div class="skill-progress">
+                                    <div class="progress-circle">
+                                        <span class="progress-number">85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-3d" data-skill="80">
+                            <div class="skill-front">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-back">
+                                <div class="skill-progress">
+                                    <div class="progress-circle">
+                                        <span class="progress-number">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-3d" data-skill="75">
+                            <div class="skill-front">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-back">
+                                <div class="skill-progress">
+                                    <div class="progress-circle">
+                                        <span class="progress-number">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-3d" data-skill="85">
+                            <div class="skill-front">
+                                <i class="fas fa-database"></i>
+                                <span>Database</span>
+                            </div>
+                            <div class="skill-back">
+                                <div class="skill-progress">
+                                    <div class="progress-circle">
+                                        <span class="progress-number">85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Professional Developer</h4>
+                        <p>Creating amazing experiences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A showcase of my recent work and achievements</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>HitMeUpAfrica Platform</h3>
+                        <p>A comprehensive social platform connecting people across Nigeria with task and errands, seamless user experience.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Real-time</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://hitmeupafrica.com" class="btn-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="mailto:okontaehijesumuan@gmail.com?subject=HitMeUpAfrica Project Inquiry" class="btn-link" target="_blank">
+                                <i class="fas fa-envelope"></i>
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tartan Realty and investments ltd</h3>
+                        <p>Beautiful and intuitive real estate and investments website with seamless user interface and experience.</p>
+                        <div class="project-tags">
+                            <span>Threejs</span>
+                            <span>UI/UX</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.tartanrealtyinvestltd.co.uk/" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Dashboard--Coming Soon</h3>
+                        <p>Interactive dashboard for data visualization with real-time updates and analytics.</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Interactive Game</h3>
+                        <p>Engaging web-based game with smooth animations and responsive controls.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Canvas</span>
+                            <span>WebGL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Work Together</h2>
+                <p>Ready to bring your ideas to life? Get in touch!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>okontaehijesumuan@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+234 808 846 9442</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Port-Harcourt, Rivers State </p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ehijesumuan-okonta-723888245/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Ehis-cyber" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="https://www.instagram.com/eh.jei?igsh=MTI1YWR2c2dlNGkyNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer" title="Website" aria-label="Website">
+                            <i class="fas fa-globe"></i>
+                            <span class="sr-only">Website</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/xpwybvln" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <i class="fas fa-user form-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <i class="fas fa-envelope form-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                            <i class="fas fa-tag form-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <i class="fas fa-comment form-icon"></i>
+                        </div>
+                        <input type="hidden" name="_next" value="https://your-portfolio-url.com/thank-you">
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="btn-primary" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EhiByte. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="progress-ring">
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="25" stroke-width="3" stroke="#8B5CF6" fill="transparent"/>
+                <circle cx="30" cy="30" r="25" stroke-width="3" stroke="#F472B6" fill="transparent" class="progress-circle"/>
+            </svg>
+            <div class="scroll-percentage">0%</div>
+        </div>
+    </div>
+    
+    <!-- Magnetic Elements -->
+    <div class="magnetic-area">
+        <div class="magnetic-button" data-magnetic>
+            <i class="fas fa-rocket"></i>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="3d-effects.js"></script>
+</body>
+</html>
